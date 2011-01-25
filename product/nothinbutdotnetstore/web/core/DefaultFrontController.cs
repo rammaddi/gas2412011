@@ -4,15 +4,16 @@ namespace nothinbutdotnetstore.web.core
 {
     public class DefaultFrontController : FrontController
     {
-        CommandRegistry registry;
+        CommandRegistry command_registry;
 
-        public DefaultFrontController(CommandRegistry registry)
+        public DefaultFrontController(CommandRegistry command_registry)
         {
-            this.registry = registry;
+            this.command_registry = command_registry;
         }
+
         public void process(Request request)
         {
-            registry.get_command_that_can_run(request).run(request);
+            command_registry.get_command_that_can_run(request).run(request);
         }
     }
 }
