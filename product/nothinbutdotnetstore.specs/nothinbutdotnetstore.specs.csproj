@@ -72,6 +72,8 @@
     <Compile Include="utility\BaseConcern.cs" />
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />
+    <Compile Include="web\core\DepartmentListRenderer.cs" />
+    <Compile Include="web\core\ViewMainDepartmentsSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
     <Compile Include="web\RequestCommandSpecs.cs" />
