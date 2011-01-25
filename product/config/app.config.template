@@ -20,9 +20,9 @@
     </pages>
     <authentication mode="Windows"/>
     <httpHandlers>
-      <add path=""
+      <add path="*.invision"
         verb="*"
-        type=""/>
+        type="nothinbutdotnetstore.web.core.RawHandler,nothinbutdotnetstore"/>
     </httpHandlers>
 
    </system.web>

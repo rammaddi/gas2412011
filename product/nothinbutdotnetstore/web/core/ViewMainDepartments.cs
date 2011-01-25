@@ -1,4 +1,6 @@
 using nothinbutdotnetstore.tasks;
+using nothinbutdotnetstore.tasks.stubs;
+using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -6,6 +8,11 @@ namespace nothinbutdotnetstore.web.core
     {
         DepartmentsRepository repository;
         Renderer renderer;
+
+        public ViewMainDepartments():this(new StubDepartmentRepository(),
+            new StubRenderer())
+        {
+        }
 
         public ViewMainDepartments(DepartmentsRepository repository, Renderer renderer)
         {

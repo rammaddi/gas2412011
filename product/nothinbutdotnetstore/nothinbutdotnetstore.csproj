@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\DepartmentsRepository.cs" />
+    <Compile Include="tasks\stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
@@ -66,6 +67,9 @@
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubRenderer.cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\ViewMainDepartments.cs" />
     <Compile Include="web\model\Department.cs" />
   </ItemGroup>
