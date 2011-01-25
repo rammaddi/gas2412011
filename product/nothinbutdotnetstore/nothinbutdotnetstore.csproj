@@ -57,6 +57,7 @@
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
     <Compile Include="web\core\Department.cs" />
+    <Compile Include="web\core\DepartmentListRenderer.cs" />
     <Compile Include="web\core\DepartmentsDataAccessor.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingCommandFactory.cs" />
