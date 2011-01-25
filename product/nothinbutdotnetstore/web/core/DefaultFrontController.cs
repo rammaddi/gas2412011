@@ -13,8 +13,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void process(Request request)
         {
-            var command_that_can_run = command_registry.get_command_that_can_run(request);
-            command_that_can_run.run(request);
+            command_registry.get_command_that_can_run(request).run(request);
         }
     }
 }
