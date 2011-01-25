@@ -74,6 +74,7 @@
     <Compile Include="web\CommandRegistrySpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RawHandlerSpecs.cs" />
+    <Compile Include="web\RequestCommandSpecs.cs" />
     <Compile Include="web\when_processing_nunit_style.cs" />
   </ItemGroup>
   <ItemGroup>
