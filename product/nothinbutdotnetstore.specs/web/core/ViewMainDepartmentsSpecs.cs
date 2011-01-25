@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
+using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.web.core;
+using nothinbutdotnetstore.web.model;
+using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web.core
 {
@@ -13,30 +13,32 @@ namespace nothinbutdotnetstore.specs.web.core
         public abstract class concern : Observes<ApplicationCommand,
                                             ViewMainDepartments>
         {
-
         }
-        public class when_processing_command_get_departments : concern
+
+        public class when_run : concern
         {
             Establish c = () =>
             {
                 request = an<Request>();
-                departments_data_accesor = the_dependency<DepartmentsDataAccessor>();
+                departments_repository = the_dependency<DepartmentsRepository>();
+                the_main_departments = new List<Department>();
+
                 renderer = the_dependency<Renderer>();
+
+                departments_repository.Stub(x => x.get_main_departments())
+                    .Return(the_main_departments);
             };
 
             Because b = () =>
                 sut.run(request);
 
-            It should_delegate_to_the_data_accessor = () =>
-            {
-                departments_data_accesor.received(x => x.getMainDepartments());
-                renderer.received(x => x.display());
-            };
+            It should_tell_the_renderer_to_display_the_set_of_main_deparments = () =>
+                renderer.received(x => x.display(the_main_departments));
 
             static Request request;
-            static DepartmentsDataAccessor departments_data_accesor;
+            static DepartmentsRepository departments_repository;
             static Renderer renderer;
+            static IEnumerable<Department> the_main_departments;
         }
-
     }
 }

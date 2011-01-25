@@ -1,9 +1,7 @@
-using System.Collections.Generic;
-
-namespace nothinbutdotnetstore.specs.web.core
+namespace nothinbutdotnetstore.web.core
 {
     public interface Renderer
     {
-        void display();
+        void display<DisplayModel>(DisplayModel item);
     }
 }

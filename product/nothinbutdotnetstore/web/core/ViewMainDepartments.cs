@@ -1,21 +1,21 @@
-using System;
-using nothinbutdotnetstore.specs.web.core;
+using nothinbutdotnetstore.tasks;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class ViewMainDepartments : ApplicationCommand
     {
-        DepartmentsDataAccessor dataAccessor;
+        DepartmentsRepository repository;
         Renderer renderer;
 
-        public ViewMainDepartments(DepartmentsDataAccessor data_accessor, Renderer renderer)
+        public ViewMainDepartments(DepartmentsRepository repository, Renderer renderer)
         {
-            this.dataAccessor = data_accessor;
+            this.repository = repository;
             this.renderer = renderer;
         }
+
         public void run(Request request)
         {
-            dataAccessor.getMainDepartments();
+            renderer.display(repository.get_main_departments());
         }
     }
 }
