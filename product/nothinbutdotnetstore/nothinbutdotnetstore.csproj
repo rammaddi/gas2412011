@@ -50,10 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\RawHandler.cs" />
+    <Compile Include="web\core\RequestFactory.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="web\core\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
