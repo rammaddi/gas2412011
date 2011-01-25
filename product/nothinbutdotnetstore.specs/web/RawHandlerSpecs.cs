@@ -20,10 +20,10 @@ namespace nothinbutdotnetstore.specs.web
         {
             Establish c = () =>
             {
-                the_incoming_context = ObjectMother.create_http_context();
                 request_factory = the_dependency<RequestFactory>();
-                request = new object();
                 front_controller = the_dependency<FrontController>();
+                the_incoming_context = ObjectMother.create_http_context();
+                request = new object();
 
                 request_factory.Stub(x => x.create(the_incoming_context))
                     .Return(request);
