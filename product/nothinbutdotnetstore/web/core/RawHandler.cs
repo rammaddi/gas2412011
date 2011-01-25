@@ -1,4 +1,3 @@
-using System;
 using System.Web;
 
 namespace nothinbutdotnetstore.web.core
@@ -13,19 +12,15 @@ namespace nothinbutdotnetstore.web.core
             this.controller = controller;
             this.factory = factory;
         }
-        
 
         public void ProcessRequest(HttpContext context)
         {
-            
             this.controller.process(factory.create(context));
         }
 
         public bool IsReusable
         {
-            get { throw new NotImplementedException(); }
+            get { return true; }
         }
-
-        
     }
 }

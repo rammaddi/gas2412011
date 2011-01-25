@@ -1,3 +1,4 @@
+ using System;
  using System.Web;
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
@@ -23,7 +24,7 @@ namespace nothinbutdotnetstore.specs.web
                 request_factory = the_dependency<RequestFactory>();
                 front_controller = the_dependency<FrontController>();
                 the_incoming_context = ObjectMother.create_http_context();
-                request = new object();
+                request = an<Request>();
 
                 request_factory.Stub(x => x.create(the_incoming_context))
                     .Return(request);
@@ -31,14 +32,13 @@ namespace nothinbutdotnetstore.specs.web
             };
 
             Because b = () =>
-                sut.ProcessRequest(the_incoming_context); 
+                sut.ProcessRequest(the_incoming_context);
 
             It should_delegate_the_processing_to_the_front_controller = () =>
                 front_controller.received(x => x.process(request));
 
-
             static FrontController front_controller;
-            static object request;
+            static Request request;
             static HttpContext the_incoming_context;
             static RequestFactory request_factory;
         }

@@ -4,6 +4,6 @@ namespace nothinbutdotnetstore.web.core
 {
     public interface RequestFactory
     {
-        object create(HttpContext the_incoming_context);
+        Request create(HttpContext the_incoming_context);
     }
 }
