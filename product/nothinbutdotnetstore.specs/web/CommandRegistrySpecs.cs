@@ -28,7 +28,7 @@ namespace nothinbutdotnetstore.specs.web
 
                 the_command_that_can_handle_the_request.Stub(x => x.can_process(request)).Return(true);
 
-                provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>();
+                provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>(all_commands);
 
             };
 
