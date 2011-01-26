@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\Catalog.cs" />
+    <Compile Include="tasks\StoreCatalogController.cs" />
     <Compile Include="tasks\stubs\StubCatalog.cs" />
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
