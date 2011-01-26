@@ -24,12 +24,13 @@ namespace nothinbutdotnetstore.specs.web.core
             {
 
                 request = an<Request>();
-                departments_repository = the_dependency<DepartmentsRepository>();
+                catalog = the_dependency<Catalog>();
                 products_in_department = new List<Product>();
                 the_department = new Department();
                 renderer = the_dependency<Renderer>();
+
                 request.Stub(x => x.map<Department>()).Return(the_department);
-                departments_repository.Stub(x => x.get_products_in_department(the_department))
+                catalog.Stub(x => x.get_products_in(the_department))
                     .Return(products_in_department);
             };
 
@@ -40,7 +41,7 @@ namespace nothinbutdotnetstore.specs.web.core
                 renderer.received(x => x.display(products_in_department));
             
             static Request request;
-			static DepartmentsRepository departments_repository;
+			static Catalog catalog;
 			static Renderer renderer;
 			static IEnumerable<Product> products_in_department;
 		    

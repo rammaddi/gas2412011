@@ -20,12 +20,12 @@ namespace nothinbutdotnetstore.specs.web.core
             Establish c = () =>
             {
                 request = an<Request>();
-                departments_repository = the_dependency<DepartmentsRepository>();
+                catalog = the_dependency<Catalog>();
                 the_main_departments = new List<Department>();
 
                 renderer = the_dependency<Renderer>();
 
-                departments_repository.Stub(x => x.get_main_departments())
+                catalog.Stub(x => x.get_main_departments())
                     .Return(the_main_departments);
             };
 
@@ -36,7 +36,7 @@ namespace nothinbutdotnetstore.specs.web.core
                 renderer.received(x => x.display(the_main_departments));
 
             static Request request;
-            static DepartmentsRepository departments_repository;
+            static Catalog catalog;
             static Renderer renderer;
             static IEnumerable<Department> the_main_departments;
         }

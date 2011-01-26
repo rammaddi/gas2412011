@@ -6,7 +6,7 @@ namespace nothinbutdotnetstore.web.core
 {
     public class ViewMainDepartments : ApplicationCommand
     {
-        DepartmentsRepository repository;
+        Catalog repository;
         Renderer renderer;
 
         public ViewMainDepartments():this(new StubDepartmentRepository(),
@@ -14,7 +14,7 @@ namespace nothinbutdotnetstore.web.core
         {
         }
 
-        public ViewMainDepartments(DepartmentsRepository repository, Renderer renderer)
+        public ViewMainDepartments(Catalog repository, Renderer renderer)
         {
             this.repository = repository;
             this.renderer = renderer;

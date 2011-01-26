@@ -7,7 +7,7 @@ namespace nothinbutdotnetstore.web.core
 {
 	public class ViewDepartmentsInDepartment :ApplicationCommand
 	{
-        DepartmentsRepository repository;
+        Catalog repository;
         Renderer renderer;
 
 		public ViewDepartmentsInDepartment()
@@ -16,7 +16,7 @@ namespace nothinbutdotnetstore.web.core
         {
         }
 
-        public ViewDepartmentsInDepartment(DepartmentsRepository repository, Renderer renderer)
+        public ViewDepartmentsInDepartment(Catalog repository, Renderer renderer)
         {
             this.repository = repository;
             this.renderer = renderer;
@@ -24,7 +24,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void run(Request request)
         {
-			renderer.display(repository.get_departments_in_department(request.map<Department>()));
+			renderer.display(repository.get_departments_in(request.map<Department>()));
         }
 	}
 }

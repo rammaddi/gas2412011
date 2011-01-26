@@ -21,7 +21,7 @@ namespace nothinbutdotnetstore.specs.web.core
 			Establish c = () =>
 			{
 				request = an<Request>();
-				departments_repository = the_dependency<DepartmentsRepository>();
+				catalog = the_dependency<Catalog>();
 				the_departments_in_department = new List<Department>();
                 the_parent_department = new Department();
 
@@ -30,7 +30,7 @@ namespace nothinbutdotnetstore.specs.web.core
 			    request.Stub(x => x.map<Department>()).Return(the_parent_department);
 
 
-				departments_repository.Stub(x => x.get_departments_in_department(the_parent_department))
+				catalog.Stub(x => x.get_departments_in(the_parent_department))
 					.Return(the_departments_in_department);
 			};
 
@@ -41,7 +41,7 @@ namespace nothinbutdotnetstore.specs.web.core
 				renderer.received(x => x.display(the_departments_in_department));
 
 			static Request request;
-			static DepartmentsRepository departments_repository;
+			static Catalog catalog;
 			static Renderer renderer;
 			static IEnumerable<Department> the_departments_in_department;
 		    static Department the_parent_department;
