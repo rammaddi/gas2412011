@@ -14,7 +14,7 @@ namespace nothinbutdotnetstore.web.core.stubs
         {
             public InputModel map<InputModel>()
             {
-                throw new NotImplementedException();
+				throw new NotImplementedException();
             }
         }
     }

@@ -5,6 +5,7 @@ using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.web.core;
 using nothinbutdotnetstore.web.model;
 using Rhino.Mocks;
+using System.Linq;
 
 namespace nothinbutdotnetstore.specs.web.core
 {
@@ -34,6 +35,9 @@ namespace nothinbutdotnetstore.specs.web.core
 
             It should_tell_the_renderer_to_display_the_set_of_main_deparments = () =>
                 renderer.received(x => x.display(the_main_departments));
+
+        	It should_have_a_valid_url = () =>
+        		the_main_departments.First().url.ShouldNotBeNull();
 
             static Request request;
             static Catalog catalog;

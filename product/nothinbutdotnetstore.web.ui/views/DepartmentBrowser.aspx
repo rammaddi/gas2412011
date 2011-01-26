@@ -13,7 +13,7 @@ CodeFile="DepartmentBrowser.aspx.cs"
                     %>
             <tr class="ListItem">
                		 <td>                     
-                     <%=department.name%>
+                     <a href="<% = department.url %>"><%=department.name%></a>
                 	</td>
            	 </tr>        
              <%
