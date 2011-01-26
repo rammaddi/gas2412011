@@ -71,6 +71,7 @@
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\ViewMainDepartments.cs" />
+    <Compile Include="web\core\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\model\Department.cs" />
   </ItemGroup>
   <ItemGroup />
