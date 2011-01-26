@@ -5,18 +5,18 @@ using nothinbutdotnetstore.web.model;
 
 namespace nothinbutdotnetstore.web.core
 {
-	public class ViewDepartmentsInDepartment :ApplicationCommand
+    public class ViewProductsInDepartment : ApplicationCommand
 	{
         DepartmentsRepository repository;
         Renderer renderer;
 
-		public ViewDepartmentsInDepartment()
+		public ViewProductsInDepartment()
 			: this(new StubDepartmentRepository(),
             new StubRenderer())
         {
         }
 
-        public ViewDepartmentsInDepartment(DepartmentsRepository repository, Renderer renderer)
+        public ViewProductsInDepartment(DepartmentsRepository repository, Renderer renderer)
         {
             this.repository = repository;
             this.renderer = renderer;
@@ -24,7 +24,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void run(Request request)
         {
-			renderer.display(repository.get_departments_in_department(request.map<Department>()));
+			renderer.display(repository.get_products_in_department(request.map<Department>()));
         }
 	}
 }

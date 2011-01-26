@@ -55,6 +55,7 @@
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\ViewProductsInDepartment.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultRequestCommand.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="web\core\ViewMainDepartments.cs" />
     <Compile Include="web\core\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\model\Department.cs" />
+    <Compile Include="web\model\Product.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
