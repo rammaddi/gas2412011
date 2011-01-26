@@ -71,6 +71,7 @@
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="utility\BaseConcern.cs" />
     <Compile Include="utility\ObjectMother.cs" />
+    <Compile Include="web\core\LinkCommandSpecs.cs" />
     <Compile Include="web\core\RendererSpecs.cs" />
     <Compile Include="web\core\ViewProductsInDepartmentSpecs.cs" />
     <Compile Include="web\CommandRegistrySpecs.cs" />

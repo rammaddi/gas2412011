@@ -59,6 +59,7 @@
     <Compile Include="web\core\GetTheCurrentContext.cs" />
     <Compile Include="web\core\GetTheMainDepartments.cs" />
     <Compile Include="web\core\GetTheReportModel.cs" />
+    <Compile Include="web\core\LinkCommand.cs" />
     <Compile Include="web\core\ModelAwareHandler.cs" />
     <Compile Include="web\core\ModelAwareHandlerFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
