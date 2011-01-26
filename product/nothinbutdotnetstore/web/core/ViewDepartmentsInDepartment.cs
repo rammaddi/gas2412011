@@ -27,4 +27,6 @@ namespace nothinbutdotnetstore.web.core
 			renderer.display(repository.get_departments_in(request.map<Department>()));
         }
 	}
+
+   
 }
