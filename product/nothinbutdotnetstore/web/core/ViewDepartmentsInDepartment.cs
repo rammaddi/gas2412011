@@ -1,6 +1,7 @@
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.core.stubs;
+using nothinbutdotnetstore.web.model;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -23,7 +24,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void run(Request request)
         {
-			renderer.display(repository.get_departments_in_department());
+			renderer.display(repository.get_departments_in_department(request.map<Department>()));
         }
 	}
 }
