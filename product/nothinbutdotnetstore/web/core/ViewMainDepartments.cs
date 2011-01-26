@@ -9,7 +9,7 @@ namespace nothinbutdotnetstore.web.core
         Catalog repository;
         Renderer renderer;
 
-        public ViewMainDepartments():this(new StubDepartmentRepository(),
+        public ViewMainDepartments():this(new StubCatalog(),
             new StubRenderer())
         {
         }
