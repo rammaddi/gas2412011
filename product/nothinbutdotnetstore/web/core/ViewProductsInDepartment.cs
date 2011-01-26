@@ -1,20 +1,22 @@
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.core.stubs;
+using nothinbutdotnetstore.web.model;
 
 namespace nothinbutdotnetstore.web.core
 {
-    public class ViewMainDepartments : ApplicationCommand
-    {
+    public class ViewProductsInDepartment : ApplicationCommand
+	{
         Catalog repository;
         Renderer renderer;
 
-        public ViewMainDepartments():this(new StubDepartmentRepository(),
+		public ViewProductsInDepartment()
+			: this(new StubDepartmentRepository(),
             new StubRenderer())
         {
         }
 
-        public ViewMainDepartments(Catalog repository, Renderer renderer)
+        public ViewProductsInDepartment(Catalog repository, Renderer renderer)
         {
             this.repository = repository;
             this.renderer = renderer;
@@ -22,7 +24,7 @@ namespace nothinbutdotnetstore.web.core
 
         public void run(Request request)
         {
-            renderer.display(repository.get_main_departments());
+			renderer.display(repository.get_products_in(request.map<Department>()));
         }
-    }
+	}
 }
