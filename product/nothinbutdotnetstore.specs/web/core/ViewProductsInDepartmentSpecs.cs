@@ -23,6 +23,9 @@ namespace nothinbutdotnetstore.specs.web.core
             Establish c = () =>
             {
 
+                GetTheReportModel<int> int_pointer = (x, y) => 2;
+                GetTheReportModel<string> string_pointer = (x, y) => "";
+
                 request = an<Request>();
                 catalog = the_dependency<Catalog>();
                 products_in_department = new List<Product>();

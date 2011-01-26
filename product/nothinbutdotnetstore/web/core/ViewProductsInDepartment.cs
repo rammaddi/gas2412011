@@ -1,6 +1,5 @@
 using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.tasks.stubs;
-using nothinbutdotnetstore.web.core.stubs;
 using nothinbutdotnetstore.web.model;
 
 namespace nothinbutdotnetstore.web.core
@@ -12,7 +11,7 @@ namespace nothinbutdotnetstore.web.core
 
 		public ViewProductsInDepartment()
 			: this(new StubCatalog(),
-            new StubRenderer())
+            new DefaultRenderer())
         {
         }
 

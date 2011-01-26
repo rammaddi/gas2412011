@@ -8,8 +8,9 @@ namespace nothinbutdotnetstore.web.core.stubs
     {
         public IEnumerator<RequestCommand> GetEnumerator()
         {
-            yield return new DefaultRequestCommand(x => true, new ReportingCommand<IEnumerable<Department>>(
-                                                                  new GetTheMainDepartments().run));
+            yield return new DefaultRequestCommand(x => true, 
+            new ViewMainDepartments());
+
 
         }
 

@@ -54,11 +54,21 @@
     <Compile Include="tasks\stubs\StubCatalog.cs" />
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
+    <Compile Include="web\core\DefaultRenderer.cs" />
+    <Compile Include="web\core\GetTheCurrentContext.cs" />
     <Compile Include="web\core\GetTheMainDepartments.cs" />
     <Compile Include="web\core\GetTheReportModel.cs" />
-    <Compile Include="web\core\ReportingCommand.cs" />
+    <Compile Include="web\core\ModelAwareHandler.cs" />
+    <Compile Include="web\core\ModelAwareHandlerFactory.cs" />
     <Compile Include="web\core\CommandRegistry.cs" />
+    <Compile Include="web\core\SimpleReportModelHandler.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="web\core\stubs\GetTheProductsInADepartment.cs" />
+    <Compile Include="web\core\stubs\StubTemplateRegistry.cs" />
+    <Compile Include="web\core\Template.cs" />
+    <Compile Include="web\core\TemplateFactory.cs" />
+    <Compile Include="web\core\TemplateRegistry.cs" />
     <Compile Include="web\core\ViewProductsInDepartment.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
@@ -72,11 +82,11 @@
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubRenderer.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\ViewMainDepartments.cs" />
     <Compile Include="web\core\ViewDepartmentsInDepartment.cs" />
+    <Compile Include="web\core\WebFormTemplate.cs" />
     <Compile Include="web\model\Department.cs" />
     <Compile Include="web\model\Product.cs" />
   </ItemGroup>
