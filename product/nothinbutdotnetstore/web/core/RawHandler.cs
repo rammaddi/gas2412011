@@ -1,4 +1,5 @@
 using System.Web;
+using nothinbutdotnetstore.infrastructure.containers;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -7,7 +8,8 @@ namespace nothinbutdotnetstore.web.core
         FrontController controller;
         RequestFactory factory;
 
-        public RawHandler()
+        public RawHandler():this(Container.fetch.a<FrontController>(),
+            Container.fetch.a<RequestFactory>())
         {
         }
 
