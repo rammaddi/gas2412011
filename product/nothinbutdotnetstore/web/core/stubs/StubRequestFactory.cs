@@ -5,6 +5,7 @@ namespace nothinbutdotnetstore.web.core.stubs
 {
     public class StubRequestFactory : RequestFactory
     {
+
         public Request create(HttpContext the_incoming_context)
         {
             return new StubRequest();
@@ -12,10 +13,18 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequest : Request
         {
-            public InputModel map<InputModel>()
+			string command = "ViewMainDepartments";
+			
+			public InputModel map<InputModel>()
             {
 				throw new NotImplementedException();
             }
+
+        	public string CommandName
+        	{
+				get { return command; }
+				set { command = value; }
+        	}
         }
     }
 }

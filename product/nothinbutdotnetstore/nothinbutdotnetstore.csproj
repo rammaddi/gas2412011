@@ -55,11 +55,13 @@
     <Compile Include="tasks\stubs\StubCatalog.cs" />
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
+    <Compile Include="web\core\CommandIncomingRequestMatcher.cs" />
     <Compile Include="web\core\DefaultModelAwareHandlerFactory.cs" />
     <Compile Include="web\core\DefaultRenderer.cs" />
     <Compile Include="web\core\GetTheCurrentContext.cs" />
     <Compile Include="web\core\GetTheMainDepartments.cs" />
     <Compile Include="web\core\GetTheReportModel.cs" />
+    <Compile Include="web\core\IncomingRequestMatcher.cs" />
     <Compile Include="web\core\LinkCommand.cs" />
     <Compile Include="web\core\ModelAwareHandler.cs" />
     <Compile Include="web\core\ModelAwareHandlerFactory.cs" />

@@ -8,6 +8,7 @@ namespace nothinbutdotnetstore.web.core
 		{
 			return typeof(Command).Name + ".invision?Department=" + department.name;
 		}
+
 		public static string GetName<Command>() where Command : ApplicationCommand
 		{
 			return typeof(Command).Name + ".invision";
