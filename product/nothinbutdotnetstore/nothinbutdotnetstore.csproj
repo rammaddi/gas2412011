@@ -55,7 +55,7 @@
     <Compile Include="tasks\stubs\StubCatalog.cs" />
     <Compile Include="web\application\catalogbrowsing\Blah.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
-    <Compile Include="web\core\CommandIncomingRequestMatcher.cs" />
+    <Compile Include="web\core\RequestContainsCommand.cs" />
     <Compile Include="web\core\DefaultModelAwareHandlerFactory.cs" />
     <Compile Include="web\core\DefaultRenderer.cs" />
     <Compile Include="web\core\GetTheCurrentContext.cs" />
@@ -70,10 +70,11 @@
     <Compile Include="web\core\SimpleReportModelHandler.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="web\core\StubPathMapper.cs" />
     <Compile Include="web\core\stubs\GetTheProductsInADepartment.cs" />
+    <Compile Include="web\core\stubs\IncomingRequest.cs" />
     <Compile Include="web\core\stubs\StubTemplateRegistry.cs" />
     <Compile Include="web\core\Template.cs" />
-    <Compile Include="web\core\TemplateFactory.cs" />
     <Compile Include="web\core\TemplateRegistry.cs" />
     <Compile Include="web\core\ViewProductsInDepartment.cs" />
     <Compile Include="web\core\DefaultCommandRegistry.cs" />

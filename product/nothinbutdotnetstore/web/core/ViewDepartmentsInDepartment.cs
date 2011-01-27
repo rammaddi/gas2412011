@@ -1,5 +1,4 @@
 using nothinbutdotnetstore.tasks;
-using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.model;
 
 namespace nothinbutdotnetstore.web.core
@@ -9,13 +8,7 @@ namespace nothinbutdotnetstore.web.core
         Catalog repository;
         Renderer renderer;
 
-		public ViewDepartmentsInDepartment()
-			: this(new StubCatalog(),
-            new DefaultRenderer())
-        {
-        }
-
-        public ViewDepartmentsInDepartment(Catalog repository, Renderer renderer)
+	    public ViewDepartmentsInDepartment(Catalog repository, Renderer renderer)
         {
             this.repository = repository;
             this.renderer = renderer;

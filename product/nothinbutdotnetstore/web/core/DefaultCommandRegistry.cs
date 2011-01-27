@@ -1,16 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
         IEnumerable<RequestCommand> all_commands;
-
-        public DefaultCommandRegistry():this(new StubSetOfCommands())
-        {
-        }
 
         public DefaultCommandRegistry(IEnumerable<RequestCommand> all_commands
             )
@@ -20,9 +15,8 @@ namespace nothinbutdotnetstore.web.core
 
         public RequestCommand get_command_that_can_run(Request request)
         {
-            //need to take equest somehow do a something that uses the delegate 
-			
-			return all_commands.FirstOrDefault(x => x.can_process(request))
+
+            return all_commands.FirstOrDefault(x => x.can_process(request))
                 ?? new MissingRequestCommand();
         }
     }

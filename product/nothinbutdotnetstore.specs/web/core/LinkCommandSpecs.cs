@@ -13,7 +13,7 @@ namespace nothinbutdotnetstore.specs.web.core
 		}
 
 		[Subject(typeof(LinkCommand))]
-		public class when_observation_name : concern
+		public class when_building_a_url : concern
 		{
 
 			Establish e = () =>

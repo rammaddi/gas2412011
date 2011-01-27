@@ -1,71 +1,66 @@
- using System;
- using Machine.Specifications;
- using Machine.Specifications.DevelopWithPassion.Rhino;
- using nothinbutdotnetstore.web.core;
+using System;
+using Machine.Specifications;
+using Machine.Specifications.DevelopWithPassion.Rhino;
+using nothinbutdotnetstore.web.core;
 using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web.core
-{   
-	public class CommandIncomingRequestMatcherSpecs
-	{
-		public abstract class concern : Observes<IncomingRequestMatcher, CommandIncomingRequestMatcher>
-		{
-        
-		}
+{
+    public class CommandIncomingRequestMatcherSpecs
+    {
+        public abstract class concern : Observes<RequestContains<OurCommand>>
+        {
+        }
 
-		[Subject(typeof(CommandIncomingRequestMatcher))]
-		public class when_matching_request_criteria_to_a_main_department_model : concern
-		{
-			Establish e = () =>
-			{
-				request = an<Request>();
-				request.CommandName = "ViewMainDepartments";
+        [Subject(typeof(RequestContains<>))]
+        public class when_matching_request_criteria_to_a_application_command : concern
+        {
+            Establish e = () =>
+            {
+                request = an<Request>();
+                request.Stub(x => x.command_name).Return(typeof(OurCommand).Name);
+            };
 
-				provide_a_basic_sut_constructor_argument(request.CommandName);
+            Because b = () => { result = sut.matches(request); };
 
-			};
+            It should_return_true_if_request_command_name_matches_command_class_name = () => { result.ShouldBeTrue(); };
 
-			Because b = () =>
-			{
-				result = sut.Match<ViewMainDepartments>(request);
-			};
+            static bool result;
+            static Request request;
+        }
 
+        class NotOurCommand : ApplicationCommand
+        {
+            public void run(Request request)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
-			It should_return_true_if_request_command_name_matches_command_class_name = () =>
-			{
-				result.ShouldBeTrue();
-			};
+        public class OurCommand : ApplicationCommand
+        {
+            public void run(Request request)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
+        [Subject(typeof(RequestContains<>))]
+        public class when_the_incoming_request_does_not_match_the_command_name : concern
+        {
+            Establish e = () =>
+            {
+                request = an<Request>();
+                request.Stub(x => x.command_name).Return(typeof(NotOurCommand).Name);
+            };
 
-			static bool result;
-			static Request request;
-		}
+            Because b = () => { result = sut.matches(request); };
 
-		[Subject(typeof(CommandIncomingRequestMatcher))]
-		public class when_not_matching_request_criteria_to_a_main_department_model : concern
-		{
-			Establish e = () =>
-			{
-				request = an<Request>();
-				request.CommandName = "ViewDepartmentsInDepartment";
+            It should_return_false_if_request_command_name_does_not_match_command_class_name =
+                () => { result.ShouldBeFalse(); };
 
-				provide_a_basic_sut_constructor_argument(request.CommandName);
-
-			};
-
-			Because b = () =>
-			{
-				result = sut.Match<ViewMainDepartments>(request);
-			};
-
-
-			It should_return_false_if_request_command_name_does_not_match_command_class_name = () =>
-			{
-				result.ShouldBeFalse();
-			};
-
-			static bool result;
-			static Request request;
-		}
-	}
+            static bool result;
+            static Request request;
+        }
+    }
 }

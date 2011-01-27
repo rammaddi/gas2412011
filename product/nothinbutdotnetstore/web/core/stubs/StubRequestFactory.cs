@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.web.core.stubs
 				throw new NotImplementedException();
             }
 
-        	public string CommandName
+        	public string command_name
         	{
 				get { return command; }
 				set { command = value; }

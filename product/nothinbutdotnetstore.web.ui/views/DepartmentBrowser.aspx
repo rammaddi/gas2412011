@@ -14,7 +14,10 @@ CodeFile="DepartmentBrowser.aspx.cs"
                     %>
             <tr class="ListItem">
                		 <td>                     
-					 <a href="<% = LinkCommand.GetName<ViewDepartmentsInDepartment>(department) %>"><%=department.name%></a>
+					 <a href="<% = 
+           LinkCommand.GetName<ViewDepartmentsInDepartment>(department) %>"><%=department.name%></a>
+
+
                 	</td>
            	 </tr>        
              <%

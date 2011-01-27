@@ -2,6 +2,6 @@ namespace nothinbutdotnetstore.web.core
 {
     public interface PathMapper
     {
-        string lookup<ReportModel>(ReportModel model);
+        string get_path_to_template_for<ReportModel>(ReportModel model);
     }
 }

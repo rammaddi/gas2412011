@@ -1,14 +1,8 @@
-using nothinbutdotnetstore.web.core.stubs;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultRenderer : Renderer
     {
         TemplateRegistry template_registry;
-
-        public DefaultRenderer():this(new StubTemplateRegistry())
-        {
-        }
 
         public DefaultRenderer(TemplateRegistry template_registry)
         {
