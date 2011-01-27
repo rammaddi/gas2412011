@@ -20,7 +20,9 @@ namespace nothinbutdotnetstore.web.core
 
         public RequestCommand get_command_that_can_run(Request request)
         {
-            return all_commands.FirstOrDefault(x => x.can_process(request))
+            //need to take equest somehow do a something that uses the delegate 
+			
+			return all_commands.FirstOrDefault(x => x.can_process(request))
                 ?? new MissingRequestCommand();
         }
     }
