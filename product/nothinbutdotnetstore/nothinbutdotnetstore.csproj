@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
+    <Compile Include="infrastructure\containers\ContractRegistry.cs" />
     <Compile Include="infrastructure\containers\DependencyContainer .cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\Catalog.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="web\core\ViewMainDepartments.cs" />
     <Compile Include="web\core\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\core\WebFormTemplate.cs" />
+    <Compile Include="web\infrastructure\BasicDependencyContainer.cs" />
     <Compile Include="web\model\Department.cs" />
     <Compile Include="web\model\Product.cs" />
   </ItemGroup>
