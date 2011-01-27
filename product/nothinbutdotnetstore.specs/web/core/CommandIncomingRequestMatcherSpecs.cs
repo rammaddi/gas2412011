@@ -36,10 +36,6 @@ namespace nothinbutdotnetstore.specs.web.core
 				result.ShouldBeTrue();
 			};
 
-			It should_return_false_if_request_command_name_does_not_match_command_class_name = () =>
-			{
-				result.ShouldBeTrue();
-			};
 
 			static bool result;
 			static Request request;
