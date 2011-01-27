@@ -1,3 +1,4 @@
+ using System.Data;
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
  using nothinbutdotnetstore.infrastructure.containers;
@@ -45,7 +46,11 @@ namespace nothinbutdotnetstore.specs.infrastructure
 
     public class Dummy:IDummy
     {
-    
+        IDbConnection connection;
 
+        public Dummy(IDbConnection connection)
+        {
+            this.connection = connection;
+        }
     }
 }
