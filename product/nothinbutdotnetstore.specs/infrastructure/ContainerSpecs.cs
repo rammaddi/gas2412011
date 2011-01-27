@@ -18,6 +18,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
                 the_underlying_container = an<DependencyContainer>();
                 ContainerResolver resolver = () => the_underlying_container;
                 change(() => Container.facade_resolver).to(resolver);
+
             };
 
 

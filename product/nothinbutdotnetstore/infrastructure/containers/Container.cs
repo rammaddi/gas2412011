@@ -11,7 +11,7 @@ namespace nothinbutdotnetstore.infrastructure.containers
 
         public static DependencyContainer i_need
         {
-            get { throw new NotImplementedException(); }
+            get { return facade_resolver(); }
         }
     }
 }
