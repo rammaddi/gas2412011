@@ -23,7 +23,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
 
 
             Because b = () =>
-                result = Container.i_need;
+                result = Container.fetch;
 
             It should_provide_access_to_the_underlying_container_facade = () =>
                 result.ShouldEqual(the_underlying_container);

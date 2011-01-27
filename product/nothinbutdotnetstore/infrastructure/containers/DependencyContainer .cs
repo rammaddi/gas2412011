@@ -1,7 +1,7 @@
 namespace nothinbutdotnetstore.infrastructure.containers
 {
-    public interface DependencyContainer 
+    public interface DependencyContainer
     {
-        
+        Dependency a<Dependency>();
     }
 }

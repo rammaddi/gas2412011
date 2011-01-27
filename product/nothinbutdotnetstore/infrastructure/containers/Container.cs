@@ -9,7 +9,7 @@ namespace nothinbutdotnetstore.infrastructure.containers
             throw new NotImplementedException("This needs to be configured by the startup pipeline");
         };
 
-        public static DependencyContainer i_need
+        public static DependencyContainer fetch
         {
             get { return facade_resolver(); }
         }
