@@ -5,6 +5,7 @@ using nothinbutdotnetstore.tasks;
 using nothinbutdotnetstore.web.core;
 using nothinbutdotnetstore.web.model;
 using Rhino.Mocks;
+using System.Linq;
 
 namespace nothinbutdotnetstore.specs.web.core
 {
@@ -40,5 +41,6 @@ namespace nothinbutdotnetstore.specs.web.core
             static Renderer renderer;
             static IEnumerable<Department> the_main_departments;
         }
+
     }
 }

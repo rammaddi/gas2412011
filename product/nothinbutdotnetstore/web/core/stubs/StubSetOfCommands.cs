@@ -7,10 +7,10 @@ namespace nothinbutdotnetstore.web.core.stubs
     {
         public IEnumerator<RequestCommand> GetEnumerator()
         {
-            yield return new DefaultRequestCommand(x => true,
+			yield return new DefaultRequestCommand(x => true,
+												   new ViewMainDepartments());
+			yield return new DefaultRequestCommand(x => true,
                                                    new ViewDepartmentsInDepartment());
-            yield return new DefaultRequestCommand(x => true,
-                                                   new ViewMainDepartments());
             yield return new DefaultRequestCommand(x => true,
                                                    new ViewProductsInDepartment());
         }

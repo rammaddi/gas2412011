@@ -3,6 +3,7 @@
 Inherits="nothinbutdotnetstore.web.ui.views.DepartmentBrowser"
 CodeFile="DepartmentBrowser.aspx.cs"
  MasterPageFile="Store.master" %>
+<%@ Import Namespace="nothinbutdotnetstore.web.core" %>
 <asp:Content ID="content" runat="server" ContentPlaceHolderID="childContentPlaceHolder">
     <p class="ListHead">Select An Department</p>
             <table>            
@@ -13,7 +14,7 @@ CodeFile="DepartmentBrowser.aspx.cs"
                     %>
             <tr class="ListItem">
                		 <td>                     
-                     <%=department.name%>
+					 <a href="<% = LinkCommand.GetName<ViewDepartmentsInDepartment>(department) %>"><%=department.name%></a>
                 	</td>
            	 </tr>        
              <%
@@ -21,3 +22,4 @@ CodeFile="DepartmentBrowser.aspx.cs"
            	
 	    </table>            
 </asp:Content>
+
