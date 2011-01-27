@@ -49,6 +49,9 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\containers\Container.cs" />
+    <Compile Include="infrastructure\containers\ContainerResolver.cs" />
+    <Compile Include="infrastructure\containers\DependencyContainer .cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="tasks\Catalog.cs" />
     <Compile Include="tasks\StoreCatalogController.cs" />
